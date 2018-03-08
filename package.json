@@ -1,26 +1,29 @@
 {
-  "name": "sample",
-  "version": "1.0.0",
-  "description": "Study Project, developed in collaboration with students of Technopark",
+  "name": "2018_1_Moved_Temporarily",
+  "version": "0.1.0",
+  "description": "Counter Strike Golang",
   "main": "index.js",
   "scripts": {
-    "build": "fest-build --dir=public",
-    "start": "npm run build && DEBUG=mylogger node server",
-    "start:raw": "node server"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "contributors": [
-    "Dmitry Dorofeev",
-    "Ostapenko Anatoliy",
-    "Alexey Tyuldyukov"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontend-park-mail-ru/2018_1_Moved_Temporarily.git"
+  },
+  "author": "",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontend-park-mail-ru/2018_1_Moved_Temporarily.git"
+  },
+  "homepage": "https://github.com/frontend-park-mail-ru/2018_1_Moved_Temporarily.git",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cookie": "^0.3.1",
     "cookie-parser": "^1.4.3",
-    "debug": "^3.1.0",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "morgan": "^1.9.0",
-    "uuid": "^3.2.1",
-    "fest": "^0.12.1"
+    "pug": "^2.0.0",
+    "uuid": "^3.1.0"
   }
 }
