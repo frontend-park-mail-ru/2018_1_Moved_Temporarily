@@ -12,6 +12,11 @@ function preparePlayMenu() {
     document.playMenu.hide();
 }
 
+function prepareProfileMenu() {
+    document.profileMenu = new document.ProfileMenu(document.body);
+    document.profileMenu.hide();
+}
+
 function prepareLoginMenu() {
     const loginMenu = new document.LoginMenu(document.body, "menuContainer", "Login", "menuTitle",
         document.playMenu, "menuItem", "form");
@@ -175,6 +180,7 @@ function isValidMail(text) {
 
 prepareProfileBlock();
 preparePlayMenu();
+prepareProfileMenu();
 prepareLoginMenu();
 prepareRegisterMenu();
 prepareLeaderboard();
