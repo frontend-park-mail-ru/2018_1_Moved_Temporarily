@@ -10,12 +10,12 @@ const logger = debug('mylogger');
 
 const app = express();
 const client = path.resolve("./client/js"); // Where to get files from?
-const port = 4000;
 
 app.use(express.static(client));
 app.use(body.json());
 app.use(cookie());
 
+const port = process.env.PORT || 4000;
 
 const ids = {};
 const users = {
@@ -63,6 +63,7 @@ const allowedOrigins = [
     'localhost',
     'https://moved-temporarily-back.herokuapp.com',
     'https://moved-temporarily-front.herokuapp.com',
+    '//moved-temporarily-front.herokuapp.com',
 ];
 
 const CORS_HEADERS = {
