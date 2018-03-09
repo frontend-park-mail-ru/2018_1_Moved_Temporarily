@@ -4,6 +4,9 @@ const body = require('body-parser');
 const cors = require('cors');
 const cookie = require('cookie-parser');
 const uuid = require('uuid/v4');
+const url = require('url');
+const debug = require('debug');
+const logger = debug('mylogger');
 
 const app = express();
 const client = path.resolve("./client/js"); // Where to get files from?
@@ -12,6 +15,7 @@ const port = 4000;
 app.use(express.static(client));
 app.use(body.json());
 app.use(cookie());
+
 
 const ids = {};
 const users = {
@@ -54,6 +58,60 @@ const users = {
 };
 
 const aboutText = {text: ["Greatest game ever", "302"]};
+
+const allowedOrigins = [
+    'localhost',
+    'https://moved-temporarily-back.herokuapp.com'
+];
+
+const CORS_HEADERS = {
+    requestedHeaders: 'Access-Control-Request-Headers'.toLowerCase(),
+    requestedMethod: 'Access-Control-Request-Method'.toLowerCase(),
+
+    allowOrigin: 'Access-Control-Allow-Origin'.toLowerCase(),
+    allowMethods: 'Access-Control-Allow-Methods'.toLowerCase(),
+    allowHeaders: 'Access-Control-Allow-Headers'.toLowerCase(),
+    allowCredentials: 'Access-Control-Allow-Credentials'.toLowerCase(),
+};
+
+app.use(function (req, res, next) {
+    const requestOrigin = req.headers['origin'];
+    //console.log(req.headers);
+    console.log(requestOrigin);
+
+    if (typeof requestOrigin !== 'undefined') {
+        const requestOriginHostname = url.parse(requestOrigin).hostname;
+
+
+        const requestedHeaders = req.headers[CORS_HEADERS.requestedHeaders];
+        const requestedMethod = req.headers[CORS_HEADERS.requestedMethod];
+        logger(`Requested ${req.method} ${req.path} with origin ${requestOrigin} (${requestOriginHostname})`, {
+            requestedHeaders,
+            requestedMethod,
+        });
+
+        const headers = [];
+        if (requestedHeaders) {
+            headers.push([CORS_HEADERS.allowHeaders, requestedHeaders]);
+        }
+        if (requestedMethod) {
+            headers.push([CORS_HEADERS.allowMethods, 'GET, POST, OPTIONS']);
+        }
+
+        // res.setHeader(CORS_HEADERS.allowOrigin, '*');
+
+        if (allowedOrigins.includes(requestOriginHostname)) {
+            headers.push([CORS_HEADERS.allowOrigin, requestOrigin]);
+            headers.push([CORS_HEADERS.allowCredentials, 'true']);
+        }
+
+        const result = headers.map(pair => '\t' + pair.join(': ')).join('\n');
+        logger(`Response with headers:\n` + result);
+
+        headers.forEach(([name, value]) => res.setHeader(name, value));
+    }
+    next();
+});
 
 app.post("/login", function(request, response) {
     console.log('login');
@@ -153,7 +211,6 @@ app.get("/", function(request, response)
 });
 
 app.listen(port);
-
 console.log("pognale! " + port);
 
 

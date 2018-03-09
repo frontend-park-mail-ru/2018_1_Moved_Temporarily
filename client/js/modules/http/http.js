@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const baseUrl = `${window.location.protocol}//${window.location.host}`;
+    //const baseUrl = `${window.location.protocol}//${window.location.host}`;
 
     /**
      * Модуль, предоставляющий методы для выполнения HTTP-запросов
@@ -42,7 +42,8 @@
         }
     }
 
-    Http.BaseUrl = null;
+    Http.BaseUrl = "http://localhost:4000";
+    //Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
 
     document.Http = Http;
 })();
