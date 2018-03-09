@@ -14,7 +14,8 @@
          * @return {Promise}
          */
         static fetchGet(address) {
-            const url = (Http.BaseUrl || baseUrl) + address;
+            //const url = (Http.BaseUrl || baseUrl) + address;
+            const url = Http.BaseUrl + address;
             return fetch(url,
                 {method: 'GET', mode: 'cors', credentials: 'include' }).then(function (response) {
                     if (response.status >= 400)
@@ -30,7 +31,7 @@
          * @return {Promise}
          */
         static fetchPost(address, body) {
-            const url = (Http.BaseUrl || baseUrl) + address;
+            const url = Http.BaseUrl + address;
             return fetch(url,
                 {method: 'POST', mode: 'cors', credentials: 'include', body: JSON.stringify(body), headers:
                     {'Content-Type': 'application/json; charset=utf-8'}
@@ -44,7 +45,8 @@
 
     //Http.BaseUrl = "http://localhost:4000";
     //Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
-    Http.BaseUrl = "https//moved-temporarily-front.herokuapp.com";
+    //Http.BaseUrl = "https//moved-temporarily-front.herokuapp.com";
+    Http.BaseUrl = '';
 
     document.Http = Http;
 })();
