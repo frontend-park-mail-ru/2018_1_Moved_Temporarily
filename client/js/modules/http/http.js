@@ -42,8 +42,9 @@
         }
     }
 
-    Http.BaseUrl = "http://localhost:4000";
+    //Http.BaseUrl = "http://localhost:4000";
     //Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
+    Http.BaseUrl = "https://moved-temporarily-front.herokuapp.com";
 
     document.Http = Http;
 })();

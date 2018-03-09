@@ -61,7 +61,8 @@ const aboutText = {text: ["Greatest game ever", "302"]};
 
 const allowedOrigins = [
     'localhost',
-    'https://moved-temporarily-back.herokuapp.com'
+    'https://moved-temporarily-back.herokuapp.com',
+    'https://moved-temporarily-front.herokuapp.com',
 ];
 
 const CORS_HEADERS = {
