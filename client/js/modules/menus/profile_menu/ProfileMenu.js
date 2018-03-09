@@ -5,9 +5,9 @@
 
 (function()
 {
-    const MenuContainer = document.MenuContainer;
+    const TemplateMenu = document.TemplateMenu;
 
-    class ProfileMenu extends MenuContainer
+    class ProfileMenu extends TemplateMenu
     {
         constructor(parent = document.body)
         {
@@ -16,8 +16,13 @@
 
         onShow()
         {
-            if(document.currentUser === null)
+            if(document.currentUser === null) {
                 document.Services.changeMenu(document.profileEntry);
+            }
+            else {
+                //this.createItem("load photo", "menuItem", () => {});
+                this.innerHolder.innerHTML = ProfileTemplate();
+            }
         }
     }
 

@@ -16,4 +16,8 @@ let aboutFunc = pug.compileFileClient(ABOUT
     + "About.pug", {name: "aboutTemplate"});
 fs.writeFileSync(ABOUT + "AboutTemplate.js", aboutFunc);
 
+const PROFILE = DATA + "/modules/menus/profile_menu/";
+let profileFunc = pug.compileFileClient(PROFILE + "Profile.pug", {name: "ProfileTemplate"});
+fs.writeFileSync(PROFILE + "ProfileTemplate.js", profileFunc);
+
 console.log("Baked!");
