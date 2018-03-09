@@ -186,4 +186,4 @@ prepareRegisterMenu();
 prepareLeaderboard();
 prepareAbout();
 
-document.Http.BaseUrl = "http://" + window.location.host;
+document.Http.BaseUrl =  `${window.location.protocol}//${window.location.host}`;
