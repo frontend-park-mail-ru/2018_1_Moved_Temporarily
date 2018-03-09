@@ -11,6 +11,13 @@
         onShow()
         {
             this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
+            /*document.getElementById("scoreboardNext").addEventListener("click", () => {
+                //console.log("message");
+                //alert("message");
+                this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
+            })*/
+            //this.c("next", "", ()=>{});
+            //this.appendNewLine();
         }
     }
 
