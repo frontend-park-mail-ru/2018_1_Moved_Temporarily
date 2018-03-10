@@ -187,4 +187,5 @@ prepareLeaderboard();
 prepareAbout();
 
 //document.Http.BaseUrl = `${window.location.protocol}//${window.location.host}`;
+
 document.Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
