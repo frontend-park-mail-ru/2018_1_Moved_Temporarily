@@ -115,7 +115,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.post("/login", function(request, response) {
+app.post("/api/user/login", function(request, response) {
     console.log('login');
     let password = request.body.password;
     let email = request.body.email;
@@ -142,7 +142,7 @@ app.post("/login", function(request, response) {
     response.json({id: id});
 });
 
-app.post("/register", function (request, response)
+app.post("/api/user/register", function (request, response)
 {
     console.log('start');
     const nickname = request.body.nickname;
@@ -167,7 +167,7 @@ app.post("/register", function (request, response)
     response.json({id: id});
 });
 
-app.get("/leaderboard", function (request, response)
+app.get("/api/user/score", function (request, response)
 {
     const scorelist = Object.values(users).sort(
         (x, y) => y.score - x.score).map(
@@ -180,7 +180,7 @@ app.get("/leaderboard", function (request, response)
     response.json(scorelist);
 });
 
-app.get("/user", function (request, response)
+app.get("/api/user/user", function (request, response)
 {
     const id = request.cookies["seal"];
     const email = ids[id];
@@ -191,13 +191,13 @@ app.get("/user", function (request, response)
     response.json(users[email]);
 });
 
-app.get("/about", function(request, response)
+app.get("/api/user/about", function(request, response)
 {
    response.status(201);
    response.json(aboutText);
 });
 
-app.get("/profile", function(request, response)
+app.get("/api/user/profile", function(request, response)
 {
     let id = request.cookies["seal"];
     if(request.cookies === undefined || !ids[id])

@@ -31,12 +31,12 @@
 
         static serverCheck(body)
         {
-            return http.fetchPost("/login", body);
+            return http.fetchPost("/api/user/login", body);
         }
 
         static changeUser(user)
         {
-            http.fetchGet("/profile")
+            http.fetchGet("/api/user/profile")
                 .then((response) =>
             {
                 document.currentUser = response;
@@ -51,18 +51,17 @@
 
         static checkRegister(body)
         {
-            return http.fetchPost("/register", body);
+            return http.fetchPost("/api/user/register", body);
         }
 
         static getLeaders()
         {
-            //return http.fetchGet("/leaderboard");
             return http.fetchGet("/api/user/score");
         }
 
         static getAboutText()
         {
-            return http.fetchGet("/about");
+            return http.fetchGet("/api/user/about");
         }
     }
 
