@@ -26,12 +26,14 @@ pug_html = pug_html + "\u003Ctbody\u003E";
 ;pug_debug_line = 9;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "\u003Ctr\u003E";
 ;pug_debug_line = 10;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
-pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
-;pug_debug_line = 10;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = player.nickname) ? "" : pug_interp)) + "\u003C\u002Fth\u003E";
+pug_html = pug_html + "\u003C!--th(class='contents') #{player.nickname}--\u003E";
 ;pug_debug_line = 11;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
 ;pug_debug_line = 11;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = player.login) ? "" : pug_interp)) + "\u003C\u002Fth\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = player.score) ? "" : pug_interp)) + "\u003C\u002Fth\u003E\u003C\u002Ftr\u003E";
       }
   } else {
@@ -42,19 +44,21 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = player.score) ? "" : pug
 ;pug_debug_line = 9;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "\u003Ctr\u003E";
 ;pug_debug_line = 10;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
-pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
-;pug_debug_line = 10;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
-pug_html = pug_html + (pug_escape(null == (pug_interp = player.nickname) ? "" : pug_interp)) + "\u003C\u002Fth\u003E";
+pug_html = pug_html + "\u003C!--th(class='contents') #{player.nickname}--\u003E";
 ;pug_debug_line = 11;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
 ;pug_debug_line = 11;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+pug_html = pug_html + (pug_escape(null == (pug_interp = player.login) ? "" : pug_interp)) + "\u003C\u002Fth\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+pug_html = pug_html + "\u003Cth class=\"contents\"\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + (pug_escape(null == (pug_interp = player.score) ? "" : pug_interp)) + "\u003C\u002Fth\u003E\u003C\u002Ftr\u003E";
     }
   }
 }).call(this);
 
 pug_html = pug_html + "\u003C\u002Ftbody\u003E\u003C\u002Ftable\u003E";
-;pug_debug_line = 14;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+;pug_debug_line = 15;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "\u003Cbutton id=\"scoreboardNext\"\u003E";
-;pug_debug_line = 14;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
+;pug_debug_line = 15;pug_debug_filename = "\u002Fhome\u002Fqskwx\u002FWebstormProjects\u002F2018_1_Moved_Temporarily\u002Fclient\u002Fjs\u002Fmodules\u002Fmenus\u002Fleaderboard\u002FLeaderboard.pug";
 pug_html = pug_html + "next\u003C\u002Fbutton\u003E";}.call(this,"players" in locals_for_with?locals_for_with.players:typeof players!=="undefined"?players:undefined));} catch (err) {pug_rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}

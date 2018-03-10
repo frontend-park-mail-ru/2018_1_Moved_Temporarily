@@ -56,7 +56,8 @@
 
         static getLeaders()
         {
-            return http.fetchGet("/leaderboard");
+            //return http.fetchGet("/leaderboard");
+            return http.fetchGet("/api/user/score");
         }
 
         static getAboutText()
