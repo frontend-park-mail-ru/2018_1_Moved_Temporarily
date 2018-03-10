@@ -21,7 +21,7 @@
                     if (response.status >= 400)
                         throw response;
                     return response.json();
-                });
+                }).catch(()=>{alert('111')});
         }
 
         /**
@@ -39,7 +39,7 @@
                     if (response.status >= 400)
                         throw response;
                     return response.json();
-                });
+                }).catch(()=>{alert('111')});
         }
     }
 
