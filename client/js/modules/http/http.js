@@ -21,7 +21,10 @@
                     if (response.status >= 400)
                         throw response;
                     return response.json();
-                });
+                }).catch(function(error){
+                console.log(error);
+                console.log("get error");
+            });
         }
 
         /**
@@ -39,7 +42,10 @@
                     if (response.status >= 400)
                         throw response;
                     return response.json();
-                });
+                }).catch(function(error){
+                    console.log(error);
+                    console.log("post error");
+            });
         }
     }
 
