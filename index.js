@@ -178,6 +178,7 @@ app.get("/api/user/score", function (request, response)
 
     response.status(201);
     response.json(scorelist);
+    //console.log(scorelist);
 });
 
 app.get("/api/user/user", function (request, response)
