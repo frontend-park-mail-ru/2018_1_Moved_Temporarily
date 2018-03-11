@@ -1,5 +1,6 @@
 /**
  * Leaderboard Module - Leaderboard menu stuff
+ * @module Leaderboard
  */
 ;
 (function()

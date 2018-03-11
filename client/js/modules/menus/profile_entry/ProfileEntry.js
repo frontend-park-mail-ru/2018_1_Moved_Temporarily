@@ -1,5 +1,6 @@
 /**
  * Profile Entry - module with menu to log in and register new players
+ * @module ProfileEntry
  */
 (function()
 {

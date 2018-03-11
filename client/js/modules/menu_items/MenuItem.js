@@ -1,5 +1,6 @@
 /**
  * MenuItem - module for menu items; Capable of showing text, mouse events handling and etc
+ * @module MenuItem
  */
 ;
 (function() {

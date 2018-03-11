@@ -1,5 +1,6 @@
 /**
  * Main Menu module - constructs the very first menu you see at start-up
+ * @module MainMenu
  */
 ;
 (function()

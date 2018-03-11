@@ -1,5 +1,6 @@
 /**
  * Login menu - module, containing
+ * @module LoginMenu
  */
 ;
 (function()

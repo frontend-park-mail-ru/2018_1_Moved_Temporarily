@@ -1,6 +1,7 @@
 /**
  * designService
  * This module is designed to provide additional functionality for easier page decoration
+ * @module Services
  */
 ;
 (function()

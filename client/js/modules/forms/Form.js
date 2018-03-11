@@ -1,6 +1,7 @@
 /**
  * Form module - provides methods for easy form creation
  * (registration, login, etc)
+ * @module Form
  */
 ;
 (function() {
