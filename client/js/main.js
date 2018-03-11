@@ -57,7 +57,7 @@ function prepareLoginMenu() {
             ).then(
                 (response) => {
                     Services.changeUser(
-                        {nickname: emailForm.input.element.value, password: password.input.element.value}
+                        {login: emailForm.input.element.value, password: password.input.element.value}
                     );
                 }
             ).catch(
@@ -77,8 +77,8 @@ function prepareRegisterMenu() {
 
     let registerMenu = new LoginMenu(document.body, "menuContainer", "Register", "menuTitle",
         document.mainMenu, "menuItem", "form");
-    let nickname = registerMenu.form.createInput("centerContainer", "text", "inputIdle", "",
-    "", "Nicknickname: ", "errorMessage", "");
+    let login = registerMenu.form.createInput("centerContainer", "text", "inputIdle", "",
+    "", "login: ", "errorMessage", "");
     registerMenu.form.appendNewLine();
     let email = registerMenu.form.createInput("centerContainer", "text", "inputIdle", "",
     "", "EMail: ", "errorMessage", "");
@@ -92,11 +92,11 @@ function prepareRegisterMenu() {
     let formError = registerMenu.form.createFormError();
 
     registerMenu.form.createSubmit("centerContainer", "submit", "Register", () => {
-        nickname.error.text = email.error.text = password.error.text = confirmPassword.error.text = formError.text = "";
+        login.error.text = email.error.text = password.error.text = confirmPassword.error.text = formError.text = "";
         let wasError = false;
 
-        if(nickname.input.element.value === "") {
-            nickname.error.text = "nickname should not be empty!";
+        if(login.input.element.value === "") {
+            login.error.text = "login should not be empty!";
             wasError = true;
         }
         if(email.input.element.value === "") {
@@ -121,11 +121,11 @@ function prepareRegisterMenu() {
         } else {
             Services.checkRegister({
                     email: email.input.element.value,
-                    nickname: nickname.input.element.value, password: password.input.element.value
+                    login: login.input.element.value, password: password.input.element.value
                 }
             ).then(
                 (response) => {
-                    Services.changeUser({nickname: nickname.input.element.value});
+                    Services.changeUser({login: login.input.element.value});
                 }
             ).catch((response) => {
                 formError.text = response.error;

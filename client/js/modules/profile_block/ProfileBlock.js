@@ -43,7 +43,7 @@
             }
             else
             {
-                this.subtitle.text = user.nickname;
+                this.subtitle.text = user.login;
                 this.login.hide();
                 this.register.hide();
                 this.logout.show();

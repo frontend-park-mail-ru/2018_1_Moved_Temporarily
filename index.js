@@ -21,37 +21,37 @@ const ids = {};
 const users = {
     'a.ostapenko@corp.mail.ru': {
         email: 'a.ostapenko@corp.mail.ru',
-        nickname : 'aost',
+        login : 'aost',
         password: 'password',
         score: 7
     },
     'd.dorofeev@corp.mail.ru': {
         email: 'd.dorofeev@corp.mail.ru',
-        nickname : 'ddor',
+        login : 'ddor',
         password: 'password',
         score: 100500
     },
     'a.udalov@corp.mail.ru': {
         email: 'a.udalov@corp.mail.ru',
-        nickname : 'auda',
+        login : 'auda',
         password: 'password',
         score: 72
     },
     'marina.titova@corp.mail.ru': {
         email: 'marina.titova@corp.mail.ru',
-        nickname : 'mtit',
+        login : 'mtit',
         password: 'password',
         score: 720
     },
     'atyuldyukov@mail.ru': {
         email: 'atyuldyukov@mail.ru',
-        nickname : 'atyu',
+        login : 'atyu',
         password: 'password',
         score: 7200
     },
     'user@user.ru' : {
         email: 'user@user.ru' ,
-        nickname: 'user',
+        login: 'user',
         password: 'user',
         score: 1500
     }
@@ -145,19 +145,19 @@ app.post("/api/user/login", function(request, response) {
 app.post("/api/user/register", function (request, response)
 {
     console.log('start');
-    const nickname = request.body.nickname;
+    const login = request.body.login;
     const email = request.body.email;
     const password = request.body.password;
 
-    console.log(password, email, nickname, email);
-    if (!password || !email || !nickname || !isValidMail(email)) {
+    console.log(password, email, login, email);
+    if (!password || !email || !login || !isValidMail(email)) {
         return response.status(400).json({error: 'invalid registration data!'});
     }
-    if (users[nickname]) {
+    if (users[login]) {
         return response.status(400).json({error: 'email is already used!'});
     }
     const id = uuid();
-    const user = {email : email, nickname: nickname, password: password, score: 0};
+    const user = {email : email, login: login, password: password, score: 0};
     ids[id] = email;
     users[email] = user;
 
@@ -172,7 +172,7 @@ app.get("/api/user/score", function (request, response)
     const scorelist = Object.values(users).sort(
         (x, y) => y.score - x.score).map(
             user => {
-                return {email: user.email, nickname: user.nickname, score: user.score}
+                return {email: user.email, login: user.login, score: user.score}
                     }
             );
 
@@ -198,13 +198,13 @@ app.get("/api/user/about", function(request, response)
    response.json(aboutText);
 });
 
-app.get("/api/user/profile", function(request, response)
+app.get("/api/user/user", function(request, response)
 {
     let id = request.cookies["seal"];
     if(request.cookies === undefined || !ids[id])
         response.status(400).json({error: "Player not found!"});
     else
-        response.status(201).json({nickname: users[ids[id]].nickname});
+        response.status(201).json({login: users[ids[id]].login});
 });
 
 app.get("/", function(request, response)
@@ -215,7 +215,6 @@ app.get("/", function(request, response)
 
 app.listen(port);
 console.log("pognale! " + port);
-
 
 function isValidMail(text)
 {
