@@ -15,7 +15,9 @@
             answer = document.Services.getLeaders();
             alert(answer);
             alert(1);
+            console.log("start");
             console.log(answer);
+            console.log("stop");
             this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
             /*document.getElementById("scoreboardNext").addEventListener("click", () => {
                 //console.log("message");
