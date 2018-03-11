@@ -52,7 +52,7 @@
 
         static checkRegister(body)
         {
-            return http.fetchPost("/api/user/register", body);
+            return http.fetchPost("/api/user/signup", body);
         }
 
         static getLeaders()

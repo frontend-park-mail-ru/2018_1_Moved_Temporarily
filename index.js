@@ -142,7 +142,7 @@ app.post("/api/user/login", function(request, response) {
     response.json({id: id});
 });
 
-app.post("/api/user/register", function (request, response)
+app.post("/api/user/signup", function (request, response)
 {
     console.log('start');
     const login = request.body.login;
