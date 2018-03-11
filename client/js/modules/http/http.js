@@ -22,7 +22,7 @@
                         throw response;
                     return response.json();
                 }).catch(function(error){
-                console.log(error);
+                console.log(error.toString());
                 console.log("get error");
             });
         }
@@ -43,7 +43,7 @@
                         throw response;
                     return response.json();
                 }).catch(function(error){
-                    console.log(error);
+                    console.log(error.toString());
                     console.log("post error");
             });
         }
