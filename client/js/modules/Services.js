@@ -57,7 +57,7 @@
 
         static getLeaders()
         {
-            console.log("getLeaders");
+            console.error("getLeaders");
             return http.fetchGet("/api/user/score");
         }
 
