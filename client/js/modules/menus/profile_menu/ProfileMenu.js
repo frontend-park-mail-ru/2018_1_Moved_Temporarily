@@ -2,7 +2,6 @@
  * Profile Module - Profile settings and all this stuff
  * @module ProfileModule
  */
-;
 
 (function()
 {

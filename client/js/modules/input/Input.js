@@ -2,7 +2,7 @@
  * Input module - a wrap around <input> tag
  * @module Input
  */
-;
+
 (function()
 {
     const Widget = document.Widget;

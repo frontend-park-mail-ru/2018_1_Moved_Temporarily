@@ -3,7 +3,7 @@
  * Container is supposed to hold menu items, menu title and back button(if previous menu is set)
  * @module MenuContainer
  */
-;
+
 (function()
 {
      const MenuItem = document.MenuItem;

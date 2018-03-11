@@ -2,7 +2,7 @@
  * Play Menu - module containing game field
  * @module PlayMenu
  */
-;
+
 (function()
 {
     const MenuContainer = document.MenuContainer;

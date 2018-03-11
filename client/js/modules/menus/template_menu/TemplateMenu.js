@@ -2,7 +2,7 @@
  * TemplateMenu - parent class for menus with from template generated content
  * @module TemplateMenu
  */
-;
+
 (function()
 {
     const MenuContainer = document.MenuContainer;

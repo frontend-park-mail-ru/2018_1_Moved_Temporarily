@@ -3,8 +3,9 @@
  * (registration, login, etc)
  * @module Form
  */
-;
+
 (function() {
+    'use strict';
     const widget = document.Widget;
     const input = document.Input;
 

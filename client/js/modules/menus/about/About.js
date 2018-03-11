@@ -2,7 +2,7 @@
  * About - module for about menu
  * @module About
  */
-;
+
 (function() {
     const TemplateMenu = document.TemplateMenu;
 

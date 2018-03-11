@@ -2,7 +2,7 @@
  * Leaderboard Module - Leaderboard menu stuff
  * @module Leaderboard
  */
-;
+
 (function()
 {
     const TemplateMenu = document.TemplateMenu;
@@ -12,7 +12,7 @@
         onShow()
         {
             //this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
-            answer = document.Services.getLeaders();
+            let answer = document.Services.getLeaders();
             alert(answer);
             alert(1);
             console.log("start");

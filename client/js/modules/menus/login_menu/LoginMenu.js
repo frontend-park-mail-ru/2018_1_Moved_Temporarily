@@ -2,7 +2,7 @@
  * Login menu - module, containing
  * @module LoginMenu
  */
-;
+
 (function()
 {
     const Form = document.Form;

@@ -3,7 +3,7 @@
  * This module is designed to provide additional functionality for easier page decoration
  * @module Services
  */
-;
+
 (function()
 {
     const Http = document.Http;

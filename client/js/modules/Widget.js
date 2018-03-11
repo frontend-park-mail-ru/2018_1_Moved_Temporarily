@@ -5,7 +5,6 @@
     @module Widjet
  */
 
-;
 (function() {
     class Widget
     {
