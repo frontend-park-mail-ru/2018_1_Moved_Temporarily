@@ -13,9 +13,10 @@
         {
             //this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
             answer = document.Services.getLeaders();
-            if (typeof(answer) === Object) {
-                this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
-            }
+            alert(answer);
+            alert(1);
+            console.log(answer);
+            this.innerHolder.innerHTML = leaderboardTemplate({players: document.Services.getLeaders()});
             /*document.getElementById("scoreboardNext").addEventListener("click", () => {
                 //console.log("message");
                 //alert("message");
