@@ -29,7 +29,7 @@
         {
             //document.currentUser = null;
             http.fetchGet("/api/user/logout").
-                then(() => {document.currentUser = null;});
+                then((response) => {document.currentUser = null;});
         }
 
         static serverCheck(body)
