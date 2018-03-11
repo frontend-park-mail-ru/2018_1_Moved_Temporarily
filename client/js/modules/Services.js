@@ -37,7 +37,7 @@
 
         static changeUser(user)
         {
-            http.fetchGet("/api/user/user")
+            http.fetchGet("/api/user/info")
                 .then((response) =>
             {
                 document.currentUser = response;

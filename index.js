@@ -198,7 +198,7 @@ app.get("/api/user/about", function(request, response)
    response.json(aboutText);
 });
 
-app.get("/api/user/user", function(request, response)
+app.get("/api/user/info", function(request, response)
 {
     let id = request.cookies["seal"];
     if(request.cookies === undefined || !ids[id])
