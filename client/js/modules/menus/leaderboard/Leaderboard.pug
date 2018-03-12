@@ -1,0 +1,15 @@
+table(class='leaderTable')
+    thead
+        tr
+            th(class='header') Player
+            th(class='header') Score
+
+    tbody
+        each player in players
+            tr
+                //th(class='contents') #{player.login}
+                th(class='contents') #{player.login}
+                th(class='contents') #{player.score}
+
+
+button(id="scoreboardNext") next
