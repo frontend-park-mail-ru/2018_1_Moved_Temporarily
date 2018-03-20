@@ -1,4 +1,3 @@
-
 const http = document.Http;
 const Services = document.Services;
 
@@ -175,7 +174,7 @@ function isValidMail(text) {
     let reg = /[0-9A-Za-z\-\_]+@[A-Za-z\-\_]+\.[A-Za-z\-\_]+/; // RegExp for email
     let match = text.match(reg);
 
-    return match != null && match[0] === text;
+    return match !== null && match[0] === text;
 }
 
 prepareProfileBlock();
@@ -188,4 +187,4 @@ prepareAbout();
 
 //document.Http.BaseUrl = `${window.location.protocol}//${window.location.host}`;
 
-document.Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
+//document.Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";

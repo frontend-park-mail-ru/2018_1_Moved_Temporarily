@@ -1,7 +1,7 @@
 const fs = require("fs");
 const pug = require("pug");
 const path = require("path");
-const DATA = path.resolve("./client/js/");
+const DATA = path.resolve("./client/data/");
 
 console.log("Baking...");
 

@@ -9,7 +9,7 @@ const debug = require('debug');
 const logger = debug('mylogger');
 
 const app = express();
-const client = path.resolve("./client/js"); // Where to get files from?
+const client = path.resolve("./client/data"); // Where to get files from?
 
 app.use(express.static(client));
 app.use(body.json());

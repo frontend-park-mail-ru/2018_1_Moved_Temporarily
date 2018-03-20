@@ -1,6 +1,6 @@
 .menuContainer
 {
-    position: fixed;
+    position: absolute;
     left: 15%;
     right: 15%;
     top: 15%;

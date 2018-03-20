@@ -2,6 +2,23 @@
     "esversion":6,
     "asi":true,
     "globals" :{
-        "document":true
-    }
+        "document":true,
+        "console":true,
+        "window":true,
+        "fetch":true
+    },
+    "curly" : true,
+    "eqeqeq":true,
+    "forin" : true,
+    "immed" : true,
+
+    "latedef" : true,
+    "newcap" : true,
+    "noarg" : true,
+    "noempty" : true,
+    "plusplus" : true,
+    // "undef" : true
+    "funcscope" : false,
+    "trailing" : true,
+    "strict": false
 }
