@@ -54,3 +54,5 @@ class Services {
         return http.fetchGet("/api/user/about");
     }
 }
+
+export default Services;
