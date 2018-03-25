@@ -1,21 +1,21 @@
 "use strict";
 
 import Subscriber from "./Subscriber.js";
-import mainMenuView from "./Views/MainMenuView/MainMenuView.js";
-import aboutMenuView from "./Views/AboutMenuView/AboutMenuView.js";
-import leaderboardView from "./Views/LeaderboardView/LeaderboardView.js";
-import gameModeMenuView from "./Views/GameModeMenuView/GameModeMenuView.js";
-import loginMenuView from "./Views/LoginMenuView/LoginMenuView.js";
-import registerMenuView from "./Views/RegisterMenuView/RegisterMenuView.js";
-import userProfileBlockView from "./Views/UserProfileBlockView/UserProfileBlockView.js";
-import MainMenuController from "./Controllers/MainMenuController.js";
-import AboutMenuController from "./Controllers/AboutMenuController.js";
-import LeaderboardController from "./Controllers/LeaderboardController.js";
-import GameModeMenuController from "./Controllers/GameModeMenuController.js";
-import LoginMenuController from "./Controllers/LoginMenuController.js";
-import RegisterMenuController from "./Controllers/RegisterMenuController.js";
-import UserProfileBlockController from "./Controllers/UserProfileBlockController.js";
-import StartGameMenuSelector from "./Controllers/StartGameMenuSelector.js";
+import mainMenuView from "./views/MainMenuView/MainMenuView.js";
+import aboutMenuView from "./views/AboutMenuView/AboutMenuView.js";
+import leaderboardView from "./views/LeaderboardView/LeaderboardView.js";
+import gameModeMenuView from "./views/GameModeMenuView/GameModeMenuView.js";
+import loginMenuView from "./views/LoginMenuView/LoginMenuView.js";
+import registerMenuView from "./views/RegisterMenuView/RegisterMenuView.js";
+import userProfileBlockView from "./views/UserProfileBlockView/UserProfileBlockView.js";
+import MainMenuController from "./controllers/MainMenuController.js";
+import AboutMenuController from "./controllers/AboutMenuController.js";
+import LeaderboardController from "./controllers/LeaderboardController.js";
+import GameModeMenuController from "./controllers/GameModeMenuController.js";
+import LoginMenuController from "./controllers/LoginMenuController.js";
+import RegisterMenuController from "./controllers/RegisterMenuController.js";
+import UserProfileBlockController from "./controllers/UserProfileBlockController.js";
+import StartGameMenuSelector from "./controllers/StartGameMenuSelector.js";
 
 class MenuManager extends Subscriber
 {

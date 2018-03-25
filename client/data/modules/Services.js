@@ -53,6 +53,10 @@ class Services {
     static getAboutText() {
         return http.fetchGet("/api/user/about");
     }
+
+    static getUser() {
+        return http.fetchGet("/api/user/info")
+    }
 }
 
 export default Services;

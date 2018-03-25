@@ -1,65 +1,30 @@
 <html>
 <head>
-    <title> Counter Strike Go </title>
-    <link rel="stylesheet" href="../resourses/css/style.css">
-    <link rel="stylesheet" href="modules/menu_items/MenuItem.css">
-    <link rel="stylesheet" href="modules/menu_container/MenuContainer.css">
-    <link rel="stylesheet" href="modules/input/Input.css">
-    <link rel="stylesheet" href="modules/forms/Form.css">
-    <link rel="stylesheet" href="modules/profile_block/ProfileBlock.css">
-    <link rel="stylesheet" href="modules/menus/play_menu/PlayMenu.css">
-    <link rel="stylesheet" href="modules/menus/login_menu/LoginMenu.css">
-    <link rel="stylesheet" href="modules/menus/leaderboard/Leaderboard.css">
-    <link rel="stylesheet" href="modules/menus/about/About.css">
-    <script src="modules/menus/profile_entry/ProfileEntry.js"></script>
-    <script src="modules/menus/play_menu/PlayMenu.js"></script>
-    <script src="modules/menus/play_menu/ProfileMenu.js"></script>
-    <script src="modules/menus/profile_menu/ProfileTemplate.js"></script>
+    <title> SeaBattle </title>
+    <link rel="stylesheet" href="./CSS/Styles.css">
+    <link rel="stylesheet" href="./modules/views/BaseMenuView/BaseMenuView.css">
+    <link rel="stylesheet" href="./modules/views/BaseView/BaseView.css">
+    <link rel="stylesheet" href="./modules/views/AboutMenuView/AboutMenuView.css">
+    <link rel="stylesheet" href="./modules/views/LeaderboardView/LeaderboardView.css">
+    <link rel="stylesheet" href="./modules/views/LoginMenuView/LoginMenuView.css">
+    <link rel="stylesheet" href="./modules/blocks/input/input/Input.css">
+    <link rel="stylesheet" href="./modules/views/UserProfileBlockView/UserProfileBlock.css">
+
+    <link rel="stylesheet" href="./Game/CSS/GameStyle.css">
 </head>
 
 <body>
 
-<!-- predefined variables -->
-<script>
-    // menus
-    document.mainMenu = null;
-    document.playMenu = null; // Game field
-    document.profileEntry = null; // Log-in/Register
-    document.leaderboardMenu = null;
-    document.aboutMenu = null;
-    document.profileBlock = null;
-    document.login = null;
-    document.register = null;
-    document.profileMenu = null;
+<!-- Pug modules - pug doesn't support ES6 modules  -->
+<script src="./modules/views/MainMenuView/MainMenuViewTemplate.js"></script>
+<script src="./modules/views/AboutMenuView/AboutMenuViewTemplate.js"></script>
+<script src="./modules/views/LeaderboardView/LeaderboardViewTemplate.js"></script>
+<script src="./modules/views/StartGameMenuView/StartGameMenuViewTemplate.js"></script>
+<script src="./modules/views/LoginMenuView/LoginMenuViewTemplate.js"></script>
+<script src="./modules/views/RegisterMenuView/RegisterMenuViewTemplate.js"></script>
+<script src="./modules/views/UserProfileBlockView/UserProfileBlockViewTemplate.js"></script>
 
-    // Current User
-    document.currentUser = null;
-</script>
-
-<!-- modules go here -->
-<script src="modules/Services.js"></script>
-<script src="modules/blocks/widget.js"></script>
-<script src="modules/input/Input.js"></script>
-<script src="modules/menu_items/MenuItem.js"></script>
-<script src="modules/menu_container/MenuContainer.js"></script>
-<script src="modules/menus/template_menu/TemplateMenu.js"></script>
-<script src="modules/forms/Form.js"></script>
-<script src="modules/profile_block/ProfileBlock.js"></script>
-<script src="modules/http/http.js"></script>
-
-<!-- Templates go here -->
-<script src="modules/menus/leaderboard/LeaderboardTemplate.js"></script>
-<script src="modules/menus/about/AboutTemplate.js"></script>
-<script src="modules/menus/profile_menu/ProfileTemplate.js"></script>
-
-<!-- menus go here --->
-<script src="modules/menus/main_menu/MainMenu.js"></script>
-<script src="modules/menus/play_menu/PlayMenu.js"></script>
-<script src="modules/menus/profile_menu/ProfileMenu.js"></script>
-<script src="modules/menus/profile_entry/ProfileEntry.js"></script>
-<script src="modules/menus/login_menu/LoginMenu.js"></script>
-
-<script src="./main.js"></script>
+<script src="./main.js" type="module"></script>
 
 </body>
 </html>

@@ -218,11 +218,5 @@ console.log("pognale! " + port);
 
 function isValidMail(text)
 {
-    /*let reg = /[0-9A-Za-z\-\_]+@[A-Za-z\-\_]+\.[A-Za-z\-\_]+/; // RegExp for mail
-    let match = text.match(reg);
-
-    if(match != null && match[0] == text)
-        return true;
-    */
     return true;
 }
