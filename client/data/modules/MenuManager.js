@@ -21,9 +21,9 @@ class MenuManager extends Subscriber
 {
     constructor()
     {
-        if(MenuManager.instance)
+        if(MenuManager.instance) {
             return MenuManager.instance;
-
+        }
         super();
         this.menus =
             {
@@ -31,7 +31,7 @@ class MenuManager extends Subscriber
                 "/leaderboardMenu": new LeaderboardController(leaderboardView),
                 "/aboutMenu": new AboutMenuController(aboutMenuView),
                 "/startGame": new StartGameMenuSelector(),
-                "/selectMode": new GameModeMenuController(gameModeMenuView),
+                //"/selectMode": new GameModeMenuController(gameModeMenuView),
                 "/startGame/login": new LoginMenuController(loginMenuView),
                 "/startGame/register": new RegisterMenuController(registerMenuView),
             };
@@ -49,8 +49,9 @@ class MenuManager extends Subscriber
     {
         this.currentMenu.hide();
         this.currentMenu = this.menus[newMenuURL];
-        if(bPushState === true)
+        if(bPushState === true) {
             window.history.pushState(null, this.currentMenu.title, this.currentMenu.url);
+        }
         this.currentMenu.show();
     }
 
@@ -64,15 +65,23 @@ class MenuManager extends Subscriber
     {
         if(event.type === "changeMenu")
         {
-            if(event.bPushState === true)
+            if(event.bPushState === true) {
                 this.changeMenu(event.newMenuName, true);
-            else
+            }
+            else {
                 this.changeMenu(event.newMenuName);
+            }
         }
-        else if(event.type === "goBack")
-            window.history.back();
-        else if(event.type === "updateUser")
-            this.profileBlock.updateUser();
+        else {
+            if(event.type === "goBack") {
+                window.history.back();
+            }
+            else {
+                if(event.type === "updateUser") {
+                    this.profileBlock.updateUser();
+                }
+            }
+        }
     }
 
     registerMenu(URL, controller)

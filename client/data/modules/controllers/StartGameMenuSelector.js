@@ -19,10 +19,12 @@ class StartGameMenuSelector
         Services.getUser()
             .then(response =>
         {
-            if(response.status === 0)
+            if(response.status === 0) {
                 this.startGameMenuController.show();
-            else
-                createFirstGameScene();
+            }
+            else {
+                //createFirstGameScene();
+            }
         })
             .catch(exit =>
         {
@@ -34,12 +36,11 @@ class StartGameMenuSelector
         Services.getUser()
             .then(response =>
             {
-                if(response.status === 0)
+                if(response.status === 0) {
                     this.startGameMenuController.hide();
+                }
             })
-            .catch(exit =>
-            {
-            });
+            .catch(exit => {});
     }
 
 }

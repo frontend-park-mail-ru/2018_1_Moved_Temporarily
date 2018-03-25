@@ -13,10 +13,10 @@ class RegisterMenuController extends BaseController
     {
         super(view);
 
-        this.inputMail = new Input(null, document.registerForm.registerMailInput,
-            document.getElementById("registerMailError"));
-        this.inputNickname = new Input(null, document.registerForm.registerNicknameInput,
-            document.getElementById("registerNicknameError"));
+        this.inputEmail = new Input(null, document.registerForm.registerEmailInput,
+            document.getElementById("registerEmailError"));
+        this.inputLogin = new Input(null, document.registerForm.registerLoginInput,
+            document.getElementById("registerLoginError"));
         this.inputPassword = new Input(null, document.registerForm.registerPasswordInput,
             document.getElementById("registerPasswordError"));
         this.inputRepeatPassword = new Input(null, document.registerForm.registerRepeatPasswordInput,
@@ -34,34 +34,32 @@ class RegisterMenuController extends BaseController
 
     clearInput()
     {
-        this.inputMail.clear();
-        this.inputNickname.clear();
+        this.inputEmail.clear();
+        this.inputLogin.clear();
         this.inputPassword.clear();
         this.inputRepeatPassword.clear();
     }
 
     clearErrorInput()
     {
-        this.inputMail.clearError();
-        this.inputNickname.clearError();
+        this.inputEmail.clearError();
+        this.inputLogin.clearError();
         this.inputPassword.clearError();
         this.inputRepeatPassword.clearError();
     }
 
     submitHandler()
     {
-        if(this.validate())
-            Services.registerUser(this.inputMail.value, this.inputNickname.value, this.inputPassword.value)
-                .then(response =>
-                {
+        if(this.validate()) {
+            Services.register(this.inputEmail.value, this.inputLogin.value, this.inputPassword.value)
+                .then(response => {
                     eventBus.emitEvent({type: "updateUser"});
                     eventBus.emitEvent({type: "goBack"});
                 })
-                .catch(error =>
-                {
-                   console.log(error);
+                .catch(error => {
+                    console.log(error);
                 });
-
+        }
         return false;
     }
 
@@ -69,26 +67,26 @@ class RegisterMenuController extends BaseController
     {
         this.clearErrorInput();
 
-        let mail = this.inputMail.value;
-        let nickname = this.inputNickname.value;
+        let email = this.inputEmail.value;
+        let login = this.inputLogin.value;
         let pwd = this.inputPassword.value;
         let reppwd = this.inputRepeatPassword.value;
         let bValid = true;
 
-        if(mail === "")
+        if(email === "")
         {
-            this.inputMail.error = "Mail is required!";
+            this.inputEmail.error = "Email is required!";
             bValid = false;
         }
-        else if(!Services.isValidMail(mail))
+        else if(!Services.isValidMail(email))
         {
-            this.inputMail.error = "Invalid mail!";
+            this.inputEmail.error = "Invalid email!";
             bValid = false;
         }
 
-        if(nickname === "")
+        if(login === "")
         {
-            this.inputNickname.error = "Nickname is required!";
+            this.inputLogin.error = "Login is required!";
             bValid = false;
         }
         if(pwd === "")

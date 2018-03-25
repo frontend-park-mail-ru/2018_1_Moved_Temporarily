@@ -16,9 +16,9 @@ class MainMenuController extends BaseController
         this.view.element.childNodes.forEach((item) =>
         {
             let id = item.dataset.id;
-            if(id === undefined || id === "back")
+            if(id === undefined || id === "back") {
                 return;
-
+            }
             this.buttons[id] = new Button(item);
             item.addEventListener("click", () =>
             {

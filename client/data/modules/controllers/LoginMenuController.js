@@ -13,8 +13,8 @@ class LoginMenuController extends BaseController
     {
         super(view);
 
-        this.inputMail = new Input(null, document.loginForm.loginMailInput,
-                                         document.getElementById("loginMailError"));
+        this.inputEmail = new Input(null, document.loginForm.loginEmailInput,
+                                         document.getElementById("loginEmailError"));
         this.inputPassword = new Input(null, document.loginForm.loginPasswordInput,
                                              document.getElementById("loginPasswordError"));
         document.loginForm.onsubmit = () => this.submitHandler();
@@ -24,41 +24,39 @@ class LoginMenuController extends BaseController
 
     onShow()
     {
-        this.inputMail.clear();
-        this.inputMail.clearError();
+        this.inputEmail.clear();
+        this.inputEmail.clearError();
         this.inputPassword.clear();
         this.inputPassword.clearError();
     }
 
     submitHandler()
     {
-        if(this.validate())
-            Services.checkUser(this.inputMail.value, this.inputPassword.value)
-                .then(response =>
-                {
+        if(this.validate()) {
+            Services.checkUser(this.inputEmail.value, this.inputPassword.value)
+                .then(response => {
                     eventBus.emitEvent({type: "updateUser"});
                     eventBus.emitEvent({type: "goBack"});
                 })
-                .catch(error =>
-                {
+                .catch(error => {
                     // Throw message box;
                 });
-
+        }
         return false;
     }
 
     validate()
     {
-        this.inputMail.clearError();
+        this.inputEmail.clearError();
         this.inputPassword.clearError();
 
-        let mail = this.inputMail.value;
+        let email = this.inputEmail.value;
         let pwd = this.inputPassword.value;
         let bValid = true;
 
-        if(mail === "")
+        if(email === "")
         {
-            this.inputMail.error = "Mail is required!";
+            this.inputEmail.error = "Email is required!";
             bValid = false;
         }
         if(pwd === "")
@@ -67,12 +65,13 @@ class LoginMenuController extends BaseController
             bValid = false;
         }
 
-        if(!bValid)
+        if(!bValid) {
             return false;
+        }
 
-        if(!Services.isValidMail(mail))
+        if(!Services.isValidEmail(email))
         {
-            this.inputMail.error = "Incorrect mail specified!";
+            this.inputEmail.error = "Incorrect email specified!";
             return false;
         }
 

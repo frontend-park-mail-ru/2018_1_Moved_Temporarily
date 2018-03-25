@@ -66,7 +66,7 @@ class UserProfileBlockController extends BaseController
 
     logoutAction()
     {
-        Services.logoutUser()
+        Services.logout()
             .then((response) =>
             {
                 eventBus.emitEvent({type: "updateUser"});
@@ -90,11 +90,12 @@ class UserProfileBlockController extends BaseController
             {
                 this.removeButtons();
 
-                if(res.status === undefined)
+                if(res.status === undefined) {
                     this.view.changeData({name: res.name, loggedIn: true});
-                else
-                    this.view.changeData({loggedIn: false});
-
+                }
+                else {
+                        this.view.changeData({loggedIn: false});
+                }
                 this.createButtons();
             })
             .catch((error) =>

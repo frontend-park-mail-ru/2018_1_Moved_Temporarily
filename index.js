@@ -185,9 +185,9 @@ app.get("/api/user/user", function (request, response)
 {
     const id = request.cookies["seal"];
     const email = ids[id];
-    if (!email || !users[email])
+    if (!email || !users[email]) {
         return response.status(401).end();
-
+    }
     response.status(201);
     response.json(users[email]);
 });
@@ -206,6 +206,26 @@ app.get("/api/user/info", function(request, response)
     else
         response.status(201).json({login: users[ids[id]].login});
 });
+/*
+app.get("/api/user/info", function (req, res)
+{
+    const id = req.cookies["Special seal"];
+    console.log(id);
+    const mail = ids[id];
+    if (!mail || !users[mail])
+    {
+        res.status(201);
+        res.json({status: 0, response: "You are not currently logged in!"});
+    }
+
+
+    let result = {login: name, score, email = mail} = users[ids[id]];
+    result.password = null;
+
+    res.status(201);
+    res.json(result);
+});
+*/
 
 app.get("/", function(request, response)
 {

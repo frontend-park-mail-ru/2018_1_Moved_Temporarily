@@ -57,6 +57,24 @@ class Services {
     static getUser() {
         return http.fetchGet("/api/user/info")
     }
+
+    static isValidMail(text)
+    {
+        let reg = /[0-9A-Za-z\-\_]+@[A-Za-z\-\_]+\.[A-Za-z\-\_]+/; // RegExp for mail
+        let match = text.match(reg);
+
+        return (match !== null && match[0] === text);
+    }
+
+    static checkUser(email, pwd)
+    {
+        return Http.fetchPost("/api/user/login", {"email": email, "password": pwd});
+    }
+
+    static register(email, login, pwd)
+    {
+        return Http.FetchPost("/api/user/signup", {"login": login, "email": email, "password": pwd});
+    }
 }
 
 export default Services;
