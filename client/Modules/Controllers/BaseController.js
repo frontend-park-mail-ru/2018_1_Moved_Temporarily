@@ -1,6 +1,6 @@
 "use strict";
 
-import Button from "../Blocks/button/Button.js";
+import Button from "../Blocks/Button/Button.js";
 import EventBus from "../EventBus.js";
 
 const eventBus = new EventBus();
