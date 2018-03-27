@@ -6,7 +6,7 @@ class Button extends Widget
 {
     /**
      *
-     * @param element - element to become a button
+     * @param element - element to become a Button
      */
     constructor(element)
     {
