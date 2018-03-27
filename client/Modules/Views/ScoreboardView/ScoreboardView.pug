@@ -1,15 +1,17 @@
 include ../BaseMenuView/BaseMenuHeader.pug
 
-table.leaderTable
-    thead
-        tr
-            th.tableHeader Name
-            th.tableHeader Score
-
-    tbody
-        each player in players
+form.scoreboardForm(name="scoreboardForm")
+    table.leaderTable
+        thead
             tr
-                th.contents #{player.login}
-                th.contents #{player.score}
+                th.tableHeader Name
+                th.tableHeader Score
+
+        tbody
+            each player in players
+                tr
+                    th.contents #{player.login}
+                    th.contents #{player.score}
+    div.button(id = "scoreboardNext" data-id="scoreboardNext") Next
 
 include ../BaseMenuView/BaseMenuFoot.pug
