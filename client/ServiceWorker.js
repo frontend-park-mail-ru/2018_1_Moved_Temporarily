@@ -1,6 +1,6 @@
-const cacheList = ["/main2.js", "/Resources/Textures/paper.jpg",
-    "https://fonts.gstatic.com/s/indieflower/v9/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2",
-    "https://fonts.googleapis.com/css?family=Indie+Flower",
+const cacheList = ["/main2.js", "/Resources/Textures/background-texture.jpg",
+    //"https://fonts.gstatic.com/s/indieflower/v9/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2",
+    //"https://fonts.googleapis.com/css?family=Indie+Flower",
 ];
 
 const cacheName = "SeaBattle";
@@ -18,14 +18,14 @@ this.addEventListener("install", (event) =>
 
 this.addEventListener("fetch", (event) =>
 {
-    if(event.request.method != "GET")
+    if(event.request.method !== "GET") {
         return;
-
+    }
     let result;
 
-    if(navigator.onLine)
+    if(navigator.onLine) {
         result = fetch(event.request);
-
+    }
     else
     {
         result = caches.open(cacheName).then((cache) =>
