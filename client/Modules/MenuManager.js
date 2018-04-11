@@ -8,6 +8,7 @@ import gameModeMenuView from "./Views/GameModeMenuView/GameModeMenuView.js";
 import loginMenuView from "./Views/LoginMenuView/LoginMenuView.js";
 import registerMenuView from "./Views/RegisterMenuView/RegisterMenuView.js";
 import userProfileBlockView from "./Views/UserProfileBlockView/UserProfileBlockView.js";
+import profileMenuView from "./Views/ProfileMenuView/ProfileMenuView.js"
 import MainMenuController from "./Controllers/MainMenuController.js";
 import AboutMenuController from "./Controllers/AboutMenuController.js";
 import ScoreboardController from "./Controllers/ScoreboardController.js";
@@ -16,6 +17,7 @@ import LoginMenuController from "./Controllers/LoginMenuController.js";
 import RegisterMenuController from "./Controllers/RegisterMenuController.js";
 import UserProfileBlockController from "./Controllers/UserProfileBlockController.js";
 import StartGameMenuSelector from "./Controllers/StartGameMenuSelector.js";
+import ProfileMenuController from "./Controllers/ProfileMenuController.js";
 
 class MenuManager extends Subscriber
 {
@@ -30,6 +32,7 @@ class MenuManager extends Subscriber
                 "/": new MainMenuController(mainMenuView),
                 "/scoreboard": new ScoreboardController(scoreboardView),
                 "/about": new AboutMenuController(aboutMenuView),
+                "/profile": new ProfileMenuController(profileMenuView),
                 "/startGame": new StartGameMenuSelector(),
                 "/selectMode": new GameModeMenuController(gameModeMenuView),
                 "/startGame/login": new LoginMenuController(loginMenuView),

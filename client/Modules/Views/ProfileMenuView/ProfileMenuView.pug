@@ -1,15 +1,18 @@
-section(class="menu profile-page")
-    include ../../components/menu-ref/menu-ref.pug
+include ../BaseMenuView/BaseMenuHeader.pug
+
+form.profileForm(name="profileForm")
     div.img-with-text
-        img.avatar(src=`${avatarLink}`)
-        a#settings(href="/profile/settings") Settings
+        img.avatar(src=`${data.avatarLink}`)
+        //a#settings(href="/profile/settings") Settings
     div.profile-info
         h4
             i= 'Username: '
-            b= `${username}`
+            b= `${data.login}`
         h4
             i= 'Email: '
-            b= `${email}`
+            b= `${data.email}`
         h4
             i= 'Game rank: '
-            b= `${rank}`
+            b= `${data.score}`
+
+include ../BaseMenuView/BaseMenuFoot.pug

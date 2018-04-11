@@ -10,26 +10,10 @@ class ScoreboardController extends BaseController
     constructor(view)
     {
         super(view);
-        /*
-        let nextbtn = document.getElementById("scoreboardNext");
-        let form = document.getElementsByName("scoreboardForm");
-        form.item(0).childNodes.item(1).onclick = (evt) => {
-            debugger;
-            alert('1');
-            console.log('1');
-        };
-        debugger;
-        nextbtn.addEventListener("click", this.submitHandler);
-        nextbtn.onclick = (evt) => {
-            debugger;
-            nextbtn.innerText = "new text";
-            alert('1');
-            console.log("1");
-        };
-        debugger;
-        */
+
         this.title = "Scoreboard";
         this.url = "/scoreboard";
+        this.createNextButton();
     }
 
     onShow()
@@ -48,16 +32,34 @@ class ScoreboardController extends BaseController
                 this.view.changeData({title: "Scoreboard", players: [error]});
                 this.createBackButton();
             });
+
     }
 
-    submitHandler()
+    goNextHandler()
     {
+        alert('3');
         debugger;
-        document.getElementById("scoreboardNext").innerText = "submit";
-        alert("1");
-        console.log(1);
+        //eventBus.emitEvent({type: "goBack"});
     }
 
+    deleteNextButton()
+    {
+        this.scoreboardButton.removeEventHandler("click", this.goNextHandler);
+        delete this.scoreboardButton;
+    }
+
+    createNextButton()
+    {
+        this.view.element.childNodes.forEach((item) =>
+        {
+            if(item.dataset.id === "scoreboardNext")
+            {
+                this.scoreboardButton = new Button(item);
+                this.scoreboardButton.addEventHandler("click", this.goNextHandler);
+                debugger;
+            }
+        });
+    }
 }
 
 export default ScoreboardController;
