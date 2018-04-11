@@ -4,6 +4,9 @@ const body = require('body-parser');
 const cors = require('cors');
 const cookie = require('cookie-parser');
 const uuid = require('uuid/v4');
+const url = require('url');
+const debug = require('debug');
+const logger = debug('mylogger');
 
 const app = express();
 const DATA = path.resolve("./client/"); // Where to get files from?
@@ -100,6 +103,7 @@ app.use(function (req, res, next) {
     }
     next();
 });
+
 
 app.post("/api/user/login", function(req, res)
 {
