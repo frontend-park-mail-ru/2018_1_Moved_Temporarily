@@ -12,7 +12,7 @@ module.exports = {
     },
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -41,9 +41,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin
+        /*new webpack.optimize.UglifyJsPlugin
         ({
             compress: {drop_debugger: false}
-        })
+        })*/
     ]
 };

@@ -110,8 +110,15 @@ app.get("/api/user/info", function (req, res)
     }
 
 
-    let result = {login: name, score, email = mail} = users[ids[id]];
+    //let result = {login: name, score: score, email = mail} = users[ids[id]];
+    let usr = users[ids[id]];
+    let result = {};
     result.password = null;
+    result.login = usr.name;
+    result.email = ids[id];
+    result.score = users[ids[id]].score;
+    result.avatarLink = "henlo_my_fren";
+
 
     res.status(201);
     res.json(result);

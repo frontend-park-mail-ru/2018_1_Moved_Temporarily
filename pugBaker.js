@@ -22,5 +22,7 @@ bake("/Modules/Views/RegisterMenuView/", "RegisterMenuView.pug",
                                          "generateRegisterMenuView", "RegisterMenuViewTemplate.js");
 bake("/Modules/Views/UserProfileBlockView/", "UserProfileBlockView.pug",
                                          "generateUserProfileBlockView", "UserProfileBlockViewTemplate.js");
+bake("/Modules/Views/ProfileMenuView/", "ProfileMenuView.pug",
+                                        "generateProfileMenuView", "ProfileMenuViewTemplate.js");
 
 console.log("Baked!");
