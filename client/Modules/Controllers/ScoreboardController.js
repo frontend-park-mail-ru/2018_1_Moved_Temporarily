@@ -56,7 +56,7 @@ class ScoreboardController extends BaseController
             {
                 this.scoreboardButton = new Button(item);
                 this.scoreboardButton.addEventHandler("click", this.goNextHandler);
-                debugger;
+
             }
         });
     }

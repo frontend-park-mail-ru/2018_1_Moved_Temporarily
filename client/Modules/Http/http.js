@@ -24,7 +24,7 @@ class Http
             })
             .then(function (response)
             {
-                if (response.status >= 400) {
+                if (response.status >= 402) {
                     throw response;
                 }
                 return response.json();
