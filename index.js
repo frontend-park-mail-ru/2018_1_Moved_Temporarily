@@ -165,12 +165,10 @@ app.get("/api/user/info", function (req, res)
     const mail = ids[id];
     if (!mail || !users[mail])
     {
-        res.status(201);
-        res.json({status: 0, response: "You are not currently logged in!"});
+        res.status(401);
+        res.json({status: 0, msg: "You are not currently logged in!"});
     }
 
-
-    //let result = {login: name, score: score, email = mail} = users[ids[id]];
     let usr = users[ids[id]];
     let result = {};
     result.password = null;
