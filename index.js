@@ -109,7 +109,7 @@ app.use(function (req, res, next) {
 app.post("/api/user/login", function(req, res)
 {
     let password = req.body.password;
-    let email = req.body.loginEmail;
+    let email = req.body.email;
 
     if(!password || !email || !isValidEmail(email)) {
         return res.status(400).json({error: "Invalid data!"});
