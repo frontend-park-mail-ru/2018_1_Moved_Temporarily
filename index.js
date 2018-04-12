@@ -10,7 +10,7 @@ const logger = debug('mylogger');
 
 const app = express();
 const DATA = path.resolve("./client/"); // Where to get files from?
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.static(DATA));
 app.use(body.json());
