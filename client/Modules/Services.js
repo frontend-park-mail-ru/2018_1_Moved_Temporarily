@@ -34,7 +34,7 @@ class Services
 
     static registerUser(email, login, pwd)
     {
-        return Http.FetchPost("/api/user/users", {"login": login, "email": email, "password": pwd});
+        return Http.FetchPost("/api/user/signup", {"login": login, "email": email, "password": pwd});
     }
 
     static getUser()

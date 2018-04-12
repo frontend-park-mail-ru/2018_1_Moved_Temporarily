@@ -115,7 +115,7 @@ app.post("/api/user/login", function(req, res)
         return res.status(400).json({error: "Invalid data!"});
     }
 
-    if(!users[email] || users[email].password != password) {
+    if(!users[email] || users[email].password !== password) {
         return res.status(400).json({error: "Email/password pair is not found"});
     }
     const id = uuid();
@@ -126,7 +126,7 @@ app.post("/api/user/login", function(req, res)
     res.json({login: users[email].name, email: email, password: null, score: users[email].score});
 });
 
-app.post("/api/user/users", function (req, res)
+app.post("/api/user/signup", function (req, res)
 {
     const name = req.body.login;
     const email = req.body.email;
