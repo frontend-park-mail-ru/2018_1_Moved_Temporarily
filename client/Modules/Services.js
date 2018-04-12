@@ -44,7 +44,7 @@ class Services
 
     static logoutUser()
     {
-        return Http.FetchPost("/api/user/logout");
+        return Http.FetchDelete("/api/user/logout");
     }
 }
 

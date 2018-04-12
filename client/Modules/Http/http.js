@@ -116,6 +116,6 @@ class Http
     }
 }
 
-Http.BaseUrl = undefined;//"http://sea-battle-back.herokuapp.com/api";
+Http.BaseUrl = undefined; "https://moved-temporarily-back.herokuapp.com";
 
 export default Http;
