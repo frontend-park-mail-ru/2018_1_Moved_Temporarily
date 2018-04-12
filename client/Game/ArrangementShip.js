@@ -229,7 +229,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
             }
             else{
                 // ставим корабль на метку
-                el.style.cssText = "background-color: greenyellow;";
+                el.style.cssText = "background-color: green;";
                 el.classList.add("ship");
                 el.classList.remove("droppable");
                 // удаление клеток вокруг корабля
