@@ -28,7 +28,7 @@ const users = {
     "user6@user.ru": {name: "user6", password: "user", score: 28},
     "user7@user.ru": {name: "user7", password: "user", score: 22},
     "user8@user.ru": {name: "user8", password: "user", score: 25},
-    "user9@user.ru": {name: "user9", password: "user", score: 28},
+    /*"user9@user.ru": {name: "user9", password: "user", score: 28},
     "user10@user.ru": {name: "user10", password: "user", score: 16},
     "user11@user.ru": {name: "user11", password: "user", score: 9},
     "user12@user.ru": {name: "user12", password: "user", score: 10},
@@ -45,6 +45,7 @@ const users = {
     "user23@user.ru": {name: "user23", password: "user", score: 17},
     "user24@user.ru": {name: "user24", password: "user", score: 19},
     "user25@user.ru": {name: "user25", password: "user", score: 41},
+    */
 };
 
 const aboutText = {text: ["Counter strike golang", "Moved Temporarily"]};
@@ -183,7 +184,7 @@ app.get("/api/user/info", function (req, res)
     res.json(result);
 });
 
-app.post("/api/user/logout", function(req, res)
+app.delete("/api/user/logout", function(req, res)
 {
     res.cookie("Special seal", -1, {expires: new Date(Date.now() + 1000*60*15)});
 
