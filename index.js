@@ -190,7 +190,7 @@ app.delete("/api/user/logout", function(req, res)
     res.json({status: 0});
 });
 
-app.get("/api/user/about", function(req, res)
+app.get("/api/about", function(req, res)
 {
    res.status(201);
    res.json(aboutText);

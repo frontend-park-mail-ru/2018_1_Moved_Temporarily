@@ -16,7 +16,7 @@ class Services
 
     static getAboutText()
     {
-        return Http.FetchGet("/api/user/about");
+        return Http.FetchGet("/api/about");
     }
 
     static isValidEmail(text)
