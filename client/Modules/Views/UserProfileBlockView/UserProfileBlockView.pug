@@ -1,0 +1,17 @@
+if loggedIn
+    h3.userName #{email}
+else
+    h3.userName Please login
+
+table
+    tbody
+        if loggedIn
+            tr.alignCenter
+                th(colspan=2).alignCenter
+                    div.smallButton.rightMoveLogout(id="logout") Logout
+        else
+            tr.alignCenter
+                th.alignCenter
+                    div.smallButton.alignButtons(id="login") Login
+                th.alignCenter
+                    div.smallButton.alignButtons(id="register") Register

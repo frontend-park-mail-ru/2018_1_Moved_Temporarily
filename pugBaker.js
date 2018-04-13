@@ -1,23 +1,28 @@
 const fs = require("fs");
 const pug = require("pug");
 const path = require("path");
-const DATA = path.resolve("./client/js/");
+const DATA = path.resolve("./client/");
 
 console.log("Baking...");
 
-// leaderboard
-const LEADERBOARD = DATA + "/modules/menus/leaderboard/";
-let leaderboardFunc = pug.compileFileClient(LEADERBOARD + "Leaderboard.pug", {name: "leaderboardTemplate"});
-fs.writeFileSync(LEADERBOARD + "LeaderboardTemplate.js", leaderboardFunc);
+function bake(path, fileName, functionName, jsName)
+{
+    let fullPath = DATA + path;
+    let templateFunc = pug.compileFileClient(fullPath + fileName, {name: functionName});
+    fs.writeFileSync(fullPath + jsName, templateFunc);
+}
 
-// about
-const ABOUT = DATA + "/modules/menus/about/";
-let aboutFunc = pug.compileFileClient(ABOUT
-    + "About.pug", {name: "aboutTemplate"});
-fs.writeFileSync(ABOUT + "AboutTemplate.js", aboutFunc);
-
-const PROFILE = DATA + "/modules/menus/profile_menu/";
-let profileFunc = pug.compileFileClient(PROFILE + "Profile.pug", {name: "ProfileTemplate"});
-fs.writeFileSync(PROFILE + "ProfileTemplate.js", profileFunc);
+bake("/Modules/Views/MainMenuView/", "MainMenuView.pug", "generateMainMenuView", "MainMenuViewTemplate.js");
+bake("/Modules/Views/AboutMenuView/", "AboutMenuView.pug", "generateAboutMenuView", "AboutMenuViewTemplate.js");
+bake("/Modules/Views/ScoreboardView/", "ScoreboardView.pug", "generateScoreboardView", "ScoreboardViewTemplate.js");
+bake("/Modules/Views/StartGameMenuView/", "StartGameMenuView.pug",
+                                          "generateStartGameMenuView", "StartGameMenuViewTemplate.js");
+bake("/Modules/Views/LoginMenuView/", "LoginMenuView.pug", "generateLoginMenuView", "LoginMenuViewTemplate.js");
+bake("/Modules/Views/RegisterMenuView/", "RegisterMenuView.pug",
+                                         "generateRegisterMenuView", "RegisterMenuViewTemplate.js");
+bake("/Modules/Views/UserProfileBlockView/", "UserProfileBlockView.pug",
+                                         "generateUserProfileBlockView", "UserProfileBlockViewTemplate.js");
+bake("/Modules/Views/ProfileMenuView/", "ProfileMenuView.pug",
+                                        "generateProfileMenuView", "ProfileMenuViewTemplate.js");
 
 console.log("Baked!");

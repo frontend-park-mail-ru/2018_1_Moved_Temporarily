@@ -1,0 +1,18 @@
+include ../BaseMenuView/BaseMenuHeader.pug
+
+form.scoreboardForm(name="scoreboardForm")
+    table.leaderTable
+        thead
+            tr.tr
+                th.tableHeader.th Name
+                th.tableHeader.th Score
+
+        tbody
+            each player in players
+                tr.tr
+                    td.contents.td #{player.login}
+                    td.contents.td #{player.score}
+
+button(data-id="scoreboardNext") Next
+
+include ../BaseMenuView/BaseMenuFoot.pug

@@ -1,0 +1,18 @@
+include ../BaseMenuView/BaseMenuHeader.pug
+
+form.profileForm(name="profileForm")
+    div.img-with-text
+        img.avatar(src=`${data.avatarLink}`)
+        //a#settings(href="/profile/settings") Settings
+    div.profile-info
+        h4
+            i= 'Username: '
+            b= `${data.login}`
+        h4
+            i= 'Email: '
+            b= `${data.email}`
+        h4
+            i= 'Game rank: '
+            b= `${data.score}`
+
+include ../BaseMenuView/BaseMenuFoot.pug
