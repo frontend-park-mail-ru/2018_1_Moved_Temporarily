@@ -6,16 +6,16 @@ function getMatrixShips () {
     let count_ships = 0;
     let matrix_ships = [];
     let field = document.getElementsByClassName("field");
-    for (let i = 0; i<field.length; i++) {
+    for (let i = 0; i < field.length; i += 1) {
         if (field[i].classList.contains("ship")) {
             matrix_ships[i] = 1;
-            count_ships++;
+            count_ships += 1;
         }
         else {
             matrix_ships[i] = 0;
         }
     }
-    if (count_ships == 20) {
+    if (count_ships === 20) {
         let all_game = document.getElementsByClassName("all_game");
         document.body.removeChild(all_game[0]);
         createSecoundGameScene(matrix_ships);

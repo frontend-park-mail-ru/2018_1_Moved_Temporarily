@@ -16,8 +16,7 @@ class Services
 
     static getAboutText()
     {
-        return {text: ["Counter strike golang", "Moved Temporarily"]};
-        // return Http.FetchGet("/api/user/about");
+        return Http.FetchGet("/api/user/about");
     }
 
     static isValidEmail(text)

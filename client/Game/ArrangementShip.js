@@ -14,7 +14,6 @@
 
 let dragObject = {};
 
-
 let num_ship = 0;
 let flag_turn = 0; // 0 - x, 1 - y
 
@@ -22,10 +21,10 @@ let flag_turn = 0; // 0 - x, 1 - y
 // перетаскивание кораблей
 function onMouseDown(e) {
 
-    if (e.which != 1) return;
+    if (e.which != 1) return false;
 
     let elem = e.target.closest('.draggable');
-    if (!elem) return;
+    if (!elem) return false;
 
     dragObject.elem = elem;
     num_ship = +elem.textContent;
@@ -148,7 +147,7 @@ function AddMouseEvent () {
 
 
 
-function getCoords(elem) { // кроме IE8-
+function getCoords(elem) {
     let box = elem.getBoundingClientRect();
 
     return {

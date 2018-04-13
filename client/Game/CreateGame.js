@@ -25,10 +25,10 @@ function createFirstGameScene() {
 
     // Добавляем корабли
     let ship = 1;
-    for (let i = 4; i > 0; i--) {
+    for (let i = 4; i > 0; i -= 1) {
         let space = new Widget();
         all_game.appendChildWidget(space);
-        for (let j = i; j > 0; j--){
+        for (let j = i; j > 0; j -= 1){
             let inline_block = new Widget(document.body, "div", "inline_block");
             all_game.appendChildWidget(inline_block);
             let table_ship = new Widget(document.body, "table", "draggable");
@@ -37,7 +37,7 @@ function createFirstGameScene() {
             td_ship.text = ship;
             table_ship.appendChildWidget(td_ship);
         }
-        ship++;
+        ship += 1;
     }
 
     // Добавляем фон за полем
@@ -47,11 +47,11 @@ function createFirstGameScene() {
     // Добавляем поле для расстановки
     let table_field = new Widget(document.body, "table", "table_field");
     all_game.appendChildWidget(table_field);
-    let arr_letters = [' ', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К'];
-    for (let i = 0; i <= 10; i++) {
+    let arr_letters = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+    for (let i = 0; i <= 10; i += 1) {
         let tr_field = new Widget(document.body, "tr");
         table_field.appendChildWidget(tr_field);
-        for (let j = 0; j <= 10; j++) {
+        for (let j = 0; j <= 10; j += 1) {
             if (i === 0) {
                 let td_field = new Widget(document.body, "td");
                 td_field.text = arr_letters[j];
@@ -91,10 +91,10 @@ function createSecoundGameScene(matrix_ships) {
     let all_game = new Widget(document.body,"div", "all_game");
 
     let text = new Widget(document.body, "h1", "inline_block h1_my");
-    text.text = "Username";
+    text.text = "Pro_gamer";
     all_game.appendChildWidget(text);
     text = new Widget(document.body, "h1", "inline_block h1_enemy");
-    text.text = "Противник";
+    text.text = "Just_bot";
     all_game.appendChildWidget(text);
 
     createField(all_game, matrix_ships);
@@ -108,18 +108,18 @@ function createField(all_game, matrix_ships, flag = 0) {
     }
     let table_field = new Widget(document.body, "table", table_class);
     all_game.appendChildWidget(table_field);
-    let arr_letters = [' ', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К'];
-    for (let i = 0; i < 11; i++) {
+    let arr_letters = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+    for (let i = 0; i < 11; i += 1) {
         let tr_field = new Widget(document.body, "tr");
         table_field.appendChildWidget(tr_field);
-        for (let j = 0; j < 11; j++) {
-            if (i==0) {
+        for (let j = 0; j < 11; j += 1) {
+            if (i === 0) {
                 let td_field = new Widget(document.body, "td");
                 td_field.text = arr_letters[j];
                 tr_field.appendChildWidget(td_field);
             }
             else {
-                if (j==0){
+                if (j === 0){
                     let td_field = new Widget(document.body, "td");
                     td_field.text = i;
                     tr_field.appendChildWidget(td_field);

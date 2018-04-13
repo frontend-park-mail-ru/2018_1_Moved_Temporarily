@@ -18,14 +18,6 @@ let countEnemyShip = 20;
 // 0 - путое поле, 1 - корабль не поврежден, 2 - промах, [3 - попал,] 4 - убил
 function gameLogic (field, matrix_ships)
 {
-    // for (let i = 0; i < 10; i++) {
-    //     for (let j = 0; j < 10; j++) {
-    //         if (enemy_matrix[10*i + j]) {
-    //             let el = document.getElementById(i + "-" + j);
-    //             el.classList.add("shipDie");
-    //         }
-    //     }
-    // }
     if (myFire(field))
     {
         botFire(matrix_ships);
@@ -40,7 +32,7 @@ function gameLogic (field, matrix_ships)
         document.body.removeChild(AllGame[0]);
         LoseScene();
     }
-};
+}
 
 
 function myFire(field) {
@@ -55,7 +47,7 @@ function myFire(field) {
     if (enemy_matrix[10*i+j]) {
         enemy_matrix[10*i+j] = 4; // [3]
         field.classList.add("shipDie");
-        countEnemyShip--;
+        countEnemyShip -= 1;
         return false;
     }
     else {
@@ -63,11 +55,11 @@ function myFire(field) {
         field.classList.add("Fire");
         return true;
     }
-
+    /*
     if (!count_ship) {
         return false;
-    }
-};
+    }*/
+}
 
 function botFire(matrix_ships) {
     let iRand = Math.floor(Math.random() * (9 + 1));
@@ -81,7 +73,7 @@ function botFire(matrix_ships) {
         let el = document.getElementById(iRand + "+" + jRand);
         el.classList.remove("shipOK");
         el.classList.add("shipDie");
-        countMyShip--;
+        countMyShip -= 1;
         botFire(matrix_ships);
     }
     else {

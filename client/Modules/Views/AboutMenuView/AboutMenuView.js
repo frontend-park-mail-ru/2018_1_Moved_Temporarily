@@ -1,6 +1,6 @@
 "use strict";
 
-import BaseView from "../BaseView/BaseView.js";
+undefined;import BaseView from "../BaseView/BaseView.js";
 
 const aboutMenu = new BaseView(document.body, generateAboutMenuView, {title: "About", text: []});
 

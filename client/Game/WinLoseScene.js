@@ -24,7 +24,7 @@ function WinScene() {
     AllGame.appendChildWidget(text);
 
     text = new Widget(document.body, "h1", "newScore");
-    text.text = "Score: " + "40" + " +0"; // 40 - счет игрока
+    text.text = "Score: " + "150" + " +0";
     AllGame.appendChildWidget(text);
     // +0 так как игра с ботом
 
@@ -40,7 +40,7 @@ function LoseScene() {
     AllGame.appendChildWidget(text);
 
     text = new Widget(document.body, "h1", "newScore");
-    text.text = "Score: " + "40" + " -0"; // 40 - счет игрока
+    text.text = "Score: " + "150" + " -0";
     AllGame.appendChildWidget(text);
     // -0 так как игра с ботом
 

@@ -10,7 +10,7 @@
 
 .table_field td
 {
-    border: 1px solid #1d2d3b;
+    border: 1px solid white; /*#1d2d3b;*/
     padding: 5px;
     text-align: center;
     width: 20px;
@@ -29,14 +29,6 @@
     left: 400px;
     */
 }
-
-/*
-.img_field
-{
-    background-image: url("/Resources/Texturex/background-table-holder-texture.png");
-}
-*/
-
 
 .inline_block
 {
@@ -151,12 +143,12 @@
 
 .field_ship
 {
-    color: transparent;
+    color: white;
 }
 
 .my_field td
 {
-    border: 1px solid #1d2d3b;
+    border: 1px solid white;
     padding: 5px;
     text-align: center;
     width: 20px;
@@ -165,7 +157,7 @@
 
 .enemy_field td
 {
-    border: 1px solid #1d2d3b;
+    border: 1px solid white;
     padding: 5px;
     text-align: center;
     width: 20px;
