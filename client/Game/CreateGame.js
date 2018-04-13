@@ -94,7 +94,7 @@ function createSecoundGameScene(matrix_ships) {
     text.text = "Pro_gamer";
     all_game.appendChildWidget(text);
     text = new Widget(document.body, "h1", "inline_block h1_enemy");
-    text.text = "Just_bot";
+    text.text = "Justj_bot";
     all_game.appendChildWidget(text);
 
     createField(all_game, matrix_ships);

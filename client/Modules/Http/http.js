@@ -116,6 +116,6 @@ class Http
     }
 }
 
-Http.BaseUrl = "https://moved-temporarily-back.herokuapp.com";
+Http.BaseUrl = undefined; "https://moved-temporarily-back.herokuapp.com";
 
 export default Http;

@@ -228,7 +228,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
             }
             else{
                 // ставим корабль на метку
-                el.style.cssText = "background-color: green;";
+                el.style.cssText = "background-color: #4f8e4f;";
                 el.classList.add("ship");
                 el.classList.remove("droppable");
                 // удаление клеток вокруг корабля
@@ -257,7 +257,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
                         el = elem.closest('.droppable');
                         if (el) {
                             el.classList.remove("droppable");
-                            el.style.cssText = "background-color: yellow;";
+                            el.style.cssText = "background-color: #fff084;";
                         }
                     }
                 }
@@ -277,7 +277,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
                         el = elem.closest('.droppable');
                         if (el) {
                             el.classList.remove("droppable");
-                            el.style.cssText = "background-color: yellow;";
+                            el.style.cssText = "background-color: #fff084;";
                         }
                     }
                 }
@@ -296,7 +296,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
                         el = elem.closest('.droppable');
                         if (el) {
                             el.classList.remove("droppable");
-                            el.style.cssText = "background-color: yellow;";
+                            el.style.cssText = "background-color: #fff084;";
                         }
                     }
                 }
@@ -315,7 +315,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
                         el = elem.closest('.droppable');
                         if (el) {
                             el.classList.remove("droppable");
-                            el.style.cssText = "background-color: yellow;";
+                            el.style.cssText = "background-color: #fff084;";
                         }
                     }
                 }
