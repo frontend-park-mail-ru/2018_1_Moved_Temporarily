@@ -89,6 +89,6 @@ function botFire(matrix_ships) {
         let el = document.getElementById(iRand + "+" + jRand);
         el.classList.add("Fire");
     }
-};
+}
 
 export default gameLogic;

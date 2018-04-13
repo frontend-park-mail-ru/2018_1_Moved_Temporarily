@@ -11,12 +11,13 @@ class Services
 {
     static getLeaders()
     {
-        return Http.FetchGet("/api/user/scoreboard");
+        return Http.FetchGet("/api/user/score");
     }
 
     static getAboutText()
     {
-        return Http.FetchGet("/api/user/about");
+        return {text: ["Counter strike golang", "Moved Temporarily"]};
+        // return Http.FetchGet("/api/user/about");
     }
 
     static isValidEmail(text)

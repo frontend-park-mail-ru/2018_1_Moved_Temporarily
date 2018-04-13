@@ -91,7 +91,7 @@ class UserProfileBlockController extends BaseController
                 this.removeButtons();
 
                 if(res.status === undefined) {
-                    this.view.changeData({name: res.name, loggedIn: true});
+                    this.view.changeData({email: res.email, loggedIn: true});
                 }
                 else {
                     this.view.changeData({loggedIn: false});

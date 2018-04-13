@@ -37,8 +37,6 @@ class ScoreboardController extends BaseController
 
     goNextHandler()
     {
-        alert('3');
-        debugger;
         //eventBus.emitEvent({type: "goBack"});
     }
 

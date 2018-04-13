@@ -243,7 +243,7 @@ function field_Lighting(event, flag_turn, ship = 0) {
                 if (count == 4){
                     num = 5
                 }
-                // верх и лево
+                // верх и влево
                 for (let k = -1; k < num; k++) {
                     if (flag_turn == 0) {
                         x = event.clientX + 34*k;

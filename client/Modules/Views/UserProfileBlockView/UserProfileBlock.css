@@ -2,7 +2,6 @@
 {
     width: 200px;
     height: 80px;
-    border: 1px solid white;
     position: fixed;
     right: 10px;
     top: 10px;
@@ -14,4 +13,15 @@ h3
 {
     margin: auto;
     font-size: 20px;
+}
+
+
+.rightMoveLogout
+{
+    padding-left: 70px;
+}
+
+.alignButtons
+{
+    padding-left: 30px;
 }

@@ -1,4 +1,4 @@
-const cacheList = ["/main2.js", "/Resources/Textures/background-texture.jpg",
+const cacheList = ["/main2.js", "/Resources/Textures/background-sea.png",
     //"https://fonts.gstatic.com/s/indieflower/v9/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2",
     //"https://fonts.googleapis.com/css?family=Indie+Flower",
 ];
